@@ -860,7 +860,7 @@ if AUDIO_DISPONIBLE:
     except Exception:
         AUDIO_DISPONIBLE = False
 
-# --- apartado de volumen: se ajusta con las teclas + y - --------------------
+
 volumen = 0.5
 
 def ajustar_volumen(delta):
@@ -979,7 +979,7 @@ def dibujar_jugador(superficie, centro, colores):
 def dibujar_puerta(superficie, nivel, x, y):
     color = nivel["puerta_color"]
     if nivel["puerta_oculta"]:
-        # nivel 3: casi del mismo color del piso, solo un borde delgado la delata
+        
         pygame.draw.rect(superficie, color, (x + 4, y + 2, TAM - 8, TAM - 4), border_radius=4)
         pygame.draw.rect(superficie, (255, 255, 255), (x + 4, y + 2, TAM - 8, TAM - 4), 1, border_radius=4)
     else:
